@@ -11,7 +11,13 @@ numdata[np.isnan(numdata)]=0
 for i in range(numdata.shape[0]):
     for j in range(numdata.shape[1]):
         if(numdata[i][j]<0):
-            numdata[i][j]=0
+            if j==0:
+                if i//18==0:
+                    numdata[i][j]=0
+                else:
+                    numdata[i][j]=numdata[i-18][numdata.shape[1]-1]
+            else:
+                numdata[i][j]=numdata[i][j-1]
 for i in range(numdata.shape[1]-9):
     tmptrain=[1]
     tmpy=[numdata[9,i+9]]
