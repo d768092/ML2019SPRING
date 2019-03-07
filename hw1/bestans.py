@@ -23,4 +23,4 @@ with open(sys.argv[3],'w+',newline='') as csvfile:
     writer=csv.writer(csvfile)
     writer.writerow(['id','value'])
     for i in range(y.shape[1]):
-        writer.writerow(['id_'+str(i),round(y[0][i])])
+        writer.writerow(['id_'+str(i),y[0][i]])

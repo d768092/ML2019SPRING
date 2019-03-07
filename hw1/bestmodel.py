@@ -31,7 +31,7 @@ for i in range(numdata.shape[1]-9):
         train_y=np.hstack((train_y,tmpy))
 train_t=np.transpose(train)
 w=np.zeros([1,163])
-eta=0.1
+eta=1
 t=100000
 prev_grad=0
 for i in range(t):
