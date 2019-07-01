@@ -16,6 +16,6 @@ pip 19.0.3
 
 ```bash
 sh download.sh
-
+cd src
 python3 retrieval_example.py
 ```
